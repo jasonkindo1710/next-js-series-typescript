@@ -15,4 +15,11 @@ const ParamsPage = (props: Props) => {
   )
 }
 
+export async function getServerSideProps() {
+  await new Promise((resolve) => setTimeout(resolve, 3000))
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+
 export default ParamsPage
