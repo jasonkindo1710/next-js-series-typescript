@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
+import { MainLayout, EmptyLayout, AdminLayout } from '@/components/layout'
 const Header = dynamic(() => import('@/components/common/header'), { ssr: false })
 
 type Props = {}
@@ -32,6 +33,7 @@ const About = (props: Props) => {
   }
   return (
     <div>
+    <div>
       <h1>About Page</h1>
       <Header />
       <ul className='post-list'>
@@ -39,8 +41,10 @@ const About = (props: Props) => {
       </ul>
       <button onClick={handleNextClick}>Next page</button>
     </div>
+    </div>
   )
 }
+// About.Layout = MainLayout
 export async function getStaticProps(){
   console.log('\nget static props');
   
