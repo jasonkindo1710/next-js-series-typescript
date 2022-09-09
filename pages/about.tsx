@@ -44,7 +44,8 @@ const About = (props: Props) => {
     </div>
   )
 }
-// About.Layout = MainLayout
+About.Layout = AdminLayout
+
 export async function getStaticProps(){
   console.log('\nget static props');
   
